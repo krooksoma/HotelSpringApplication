@@ -1,16 +1,29 @@
 package com.defaria.springapp1.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="ROOM")
 public class Room implements BaseEntity{
+
+    @Id
+    @Column(name="ROOM_ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String name, type, details;
+    @Column(name="ROOM_NUMBER")
+    private String number;
+    @Column(name="NAME")
+    private String name;
+    @Column(name="BED_INFO")
+    private String details;
 
     public Room() {
     }
 
-    public Room(long id, String name, String type, String details) {
+    public Room(long id, String name, String number, String details) {
         this.id = id;
         this.name = name;
-        this.type = type;
+        this.number = number;
         this.details = details;
     }
 
@@ -30,12 +43,12 @@ public class Room implements BaseEntity{
         this.name = name;
     }
 
-    public String getType() {
-        return type;
+    public String getNumber() {
+        return number;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setNumber(String type) {
+        this.number = type;
     }
 
     public String getDetails() {
