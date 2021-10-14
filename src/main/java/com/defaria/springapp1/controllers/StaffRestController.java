@@ -1,7 +1,6 @@
 package com.defaria.springapp1.controllers;
 
-
-import com.defaria.springapp1.models.Employee;
+import com.defaria.springapp1.models.StaffMember;
 import com.defaria.springapp1.services.StaffService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +18,7 @@ public class StaffRestController {
     }
 
     @GetMapping
-    public List<Employee> getAllStaffService(){
+    public List<StaffMember> getAllStaffService(){
        return staffService.getStaff();
     }
 }

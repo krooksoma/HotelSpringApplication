@@ -1,7 +1,7 @@
 package com.defaria.springapp1.services;
 
 import com.defaria.springapp1.data.StaffRepository;
-import com.defaria.springapp1.models.Employee;
+import com.defaria.springapp1.models.StaffMember;
 import org.springframework.stereotype.Service;
 
 
@@ -16,7 +16,7 @@ public class StaffService {
         this.staffRepository = staffRepository;
     }
 
-    public List<Employee> getStaff() {
+    public List<StaffMember> getStaff() {
         return staffRepository.findAll();
     }
 }
